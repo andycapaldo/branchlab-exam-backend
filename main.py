@@ -30,7 +30,7 @@ drugs = [serialized, serialized, serialized]
 # CORS middleware to allow cross-origin requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173", "https://branchlab-exam-frontend.onrender.com"], # Ensures only the frontend can access the API (both test and production envs)
     allow_methods=["*"],
     allow_headers=["*"],
 )
