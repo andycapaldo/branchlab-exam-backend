@@ -5,21 +5,21 @@ from pydantic import BaseModel
 app = FastAPI()
 
 class Drug(BaseModel):
-    Name: str
-    Brand_Name: str
-    Drug_Class: str
-    NDC: str
-    Indications: str
-    Warnings: str
+    name: str
+    brand_name: str
+    drug_class: str
+    ndc: str
+    indications: str
+    warnings: str
 
 # Sample data for demonstration purposes
 atorvastatin = Drug(
-    Name="Atorvastatin",
-    Brand_Name="Lipitor",
-    Drug_Class="Statin",
-    NDC="0071-0155-23",
-    Indications="Hyperlipidemia, prevention of CV events",
-    Warnings="May cause liver enzyme abnormalities"
+    name="Atorvastatin",
+    brand_name="Lipitor",
+    drug_class="Statin",
+    ndc="0071-0155-23",
+    indications="Hyperlipidemia, prevention of CV events",
+    warnings="May cause liver enzyme abnormalities"
 )
 
 # Data serialized into a dictionary as this translates perfectly into JSON 
