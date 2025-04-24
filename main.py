@@ -51,6 +51,6 @@ def get_drugs():
 @app.get("/api/drug/{drug_name}", response_model=Drug)
 def get_drug_by_name(drug_name: str):
     for drug in drugs:
-        if drug['Name'].lower() == drug_name.lower():
+        if drug['name'].lower() == drug_name.lower():
             return drug 
     raise HTTPException(status_code=404, detail=f"{drug_name} not found")
